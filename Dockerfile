@@ -27,4 +27,5 @@ RUN MONO_VERSION=5.4.1.6 && \
     apt-get purge -y autoconf libtool make automake && \
     apt-get clean
 WORKDIR /root
+ENV FrameworkPathOverride /usr/lib/mono/4.5/
 CMD ["fsharpi"]
