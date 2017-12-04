@@ -5,14 +5,14 @@ Docker image for F# with mono and .NET Core toolchains
 
 To simply get an F# interactive prompt run:
 ```
-docker run dcurylo/fsharp-mono-netcore-sdk
+docker run dcurylo/fsharp-mono-netcore
 ```
 
 To use the SDK rather than launching F# interactive, append `bash` at the end of the command to start the shell instead.
 
 To mount the current directory within the container so that build artifacts remain after exit:
 ```
-docker run -v `pwd`:/root/src --rm -it dcurylo/fsharp-mono-netcore-sdk bash
+docker run -v `pwd`:/root/src --rm -it dcurylo/fsharp-mono-netcore bash
 ```
 
 When run as shown above, a new project generated within the container's `/src` directory will exist in the host.
