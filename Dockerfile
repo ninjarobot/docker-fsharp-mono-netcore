@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.3-sdk-jessie
+FROM microsoft/dotnet:2.0.4-sdk-2.1.3-jessie
 LABEL maintainer "Dave Curylo <dave@curylo.org>"
 ENV MONO_THREADS_PER_CPU 50
 RUN MONO_VERSION=5.4.1.6 && \
