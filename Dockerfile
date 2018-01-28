@@ -26,6 +26,12 @@ RUN MONO_VERSION=5.4.1.6 && \
     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local && \
     apt-get purge -y autoconf libtool make automake && \
     apt-get clean
+    
+RUN apt-get update \
+  && apt-get install -y locales \
+  && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
+  && locale-gen
+    
 WORKDIR /root
 ENV FrameworkPathOverride /usr/lib/mono/4.5/
 CMD ["fsharpi"]
