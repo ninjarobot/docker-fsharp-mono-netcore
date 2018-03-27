@@ -1,7 +1,7 @@
-FROM microsoft/dotnet:2.0.5-sdk-2.1.4-jessie
+FROM microsoft/dotnet:2.0.6-sdk-2.1.101-jessie
 LABEL maintainer "Dave Curylo <dave@curylo.org>"
 ENV MONO_THREADS_PER_CPU 50
-RUN MONO_VERSION=5.8.0.108 && \
+RUN MONO_VERSION=5.8.0.127 && \
     FSHARP_VERSION=4.1.34 && \
     FSHARP_PREFIX=/usr && \
     FSHARP_GACDIR=/usr/lib/mono/gac && \
