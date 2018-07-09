@@ -1,4 +1,4 @@
-FROM dcurylo/fsharp-mono-netcore:2.0.6
+FROM dcurylo/fsharp-mono-netcore:2.1.301
 LABEL maintainer="Dave Curylo <dave@curylo.org>"
 RUN wget https://github.com/fsprojects/Paket/releases/download/5.174.2/paket.exe \ 
     && chmod a+r paket.exe && mv paket.exe /usr/local/lib/ \ 
