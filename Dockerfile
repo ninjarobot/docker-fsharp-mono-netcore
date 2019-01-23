@@ -1,7 +1,7 @@
-FROM microsoft/dotnet:2.1.403-sdk-stretch
+FROM microsoft/dotnet:2.1.503-sdk-stretch
 LABEL maintainer "Dave Curylo <dave@curylo.org>"
 ENV MONO_THREADS_PER_CPU 50
-RUN MONO_VERSION=5.16.0.179 && \
+RUN MONO_VERSION=5.18.0.240 && \
     FSHARP_VERSION=10.2.1 && \
     FSHARP_BASENAME=fsharp-$FSHARP_VERSION && \
     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz && \
