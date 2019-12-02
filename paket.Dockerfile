@@ -1,4 +1,4 @@
-FROM fsharp:10.6.0-netcore:3.0.100
+FROM fsharp:10.6.0-netcore
 LABEL maintainer="Dave Curylo <dave@curylo.org>"
 RUN wget https://github.com/fsprojects/Paket/releases/download/5.238.2/paket.exe \ 
     && chmod a+r paket.exe && mv paket.exe /usr/local/lib/ \ 
