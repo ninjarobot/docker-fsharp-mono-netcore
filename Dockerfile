@@ -27,6 +27,12 @@ RUN MONO_VERSION=5.18.0.240 && \
     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" && \
     apt-get purge -y make gnupg dirmngr && \
     apt-get clean
+    
+RUN apt-get update \
+  && apt-get install -y locales \
+  && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
+  && locale-gen
+    
 WORKDIR /root
 ENV FrameworkPathOverride /usr/lib/mono/4.7.1-api/
 CMD ["fsharpi"]
